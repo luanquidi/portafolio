@@ -1,0 +1,26 @@
+---
+import Container from "./Container.astro"
+
+ const date = new Date().getFullYear()
+---
+<Container>
+    <footer class="bg-white rounded-lg dark:bg-gray-800">
+        <div
+            class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+        >
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+                >© { date } Luis Angel Quiñones Diaz.
+            </span>
+            <ul
+                class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+            >
+                <li>
+                    <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Inicio</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</Container>

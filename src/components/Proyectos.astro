@@ -1,0 +1,67 @@
+---
+import ProyectoItem from "./ProyectoItem.astro";
+import Angular from "./icons/Angular.astro";
+import Code from "./icons/Code.astro";
+import Node from "./icons/Node.astro";
+import Css from "./icons/Css.astro";
+import Html from "./icons/Html.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Mongo from "./icons/Mongo.astro";
+
+const proyectos = [
+    {
+        title: "Óptica Kristal",
+        description: `
+            Solución integral para ópticas modernas que buscan optimizar la gestión de sus clientes, citas, reportes y registros clínicos de manera eficiente y segura. 
+            Con una interfaz intuitiva y potentes herramientas, ÓpticaKristal simplifica las tareas diarias, permitiéndote enfocarte en lo más importante: la salud visual de tus pacientes.
+        `,
+        link: "https://opticakristal.com/",
+        github: "#",
+        image: "/optica.webp",
+        tags: [
+            {
+                name: "ANGULAR",
+                icon: Angular,
+            },
+            {
+                name: "HTML",
+                icon: Html,
+            },
+            {
+                name: "CSS",
+                icon: Css,
+            },
+            {
+                name: "JAVASCRIPT",
+                icon: JavaScript,
+            },
+            {
+                name: "NODEJS",
+                icon: Node,
+            },
+            {
+                name: "MONGO",
+                icon: Mongo,
+            },
+        ],
+    },
+];
+---
+
+<h2 class="text-4xl font-semibold mb-6 flex gap-x-2 items-center">
+    <Code class="size-7" />
+    Proyectos
+</h2>
+
+{
+    proyectos.map(({ title, description, link, github, image, tags }) => (
+        <ProyectoItem
+            title={title}
+            description={description}
+            link={link}
+            github={github}
+            tags={tags}
+            image={image}
+        />
+    ))
+}

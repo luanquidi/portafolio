@@ -1,0 +1,27 @@
+---
+import Container from "../components/Container.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+	title="Portafolio de Luis Angel - Desarrollador de Software y Programador Web con 6 años de experiencia"
+	descripcion="Contrata a Luis Angel para crear tu aplicación web o móvil. Desarrollador Web y Programador. Especializado en crear aplicaciones únicas."
+>
+	<main class="px-4">
+		<Container class="py-44 pb-30">
+			<Hero />
+		</Container>
+
+		<Container id="experiencia">
+			<Experiencia />
+		</Container>
+
+		<Container id="proyectos">
+			<Proyectos />
+		</Container>
+	</main>
+</Layout>

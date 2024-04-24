@@ -1,0 +1,80 @@
+---
+import Container from "./Container.astro";
+import ExperienciaItem from "./ExperienciaItem.astro";
+import SuiteCase from "./icons/SuiteCase.astro";
+
+const experiencias = [
+    {
+        date: "Julio 2020",
+        title: "Desarrollador FullStack - Emergia (Actualidad)",
+        description: `
+        Responsable en la implementación de desarrollos web corporativos
+        implementando tecnologías como Angular, ASP.NET y .Net core acompañado de
+        bases de datos en el motor Oracle.
+        Realizar mantenimiento en aplicativos desarrollados con Angular.
+        Diseñar y crear interfaces web responsive por medio de HTML5, CSS3, JQuery.
+        Desarrollo con metodologías ágiles (Scrum)
+        Desarrollar Web APIs en .NET Core utilizando arquitecturas N capas orientado al
+        dominio para garantizar una comunicación multiplataforma en todos los aplicativos
+        corporativos.
+        `,
+    },
+    {
+        date: "Junio 2021",
+        title: "Desarrollador - Freelance (Bancolombia)",
+        description: `
+           Creación de sistemas (MersoRPA) con metodología RPA y (Automatización robotica de procesos)
+           con herramienta Selenium para la gestión y administración de stats de sus redes sociales
+        `,
+    },
+    {
+        date: "Enero 2020",
+        title: "Desarrollador Frontend Advance -  NewShore",
+        description: `
+           Diseñar y maquetar páginas web full responsive
+           Gestion de contenido mediante la herramienta Umbraco integrar web services en aplicación web
+        `,
+    },
+    {
+        date: "Enero 2020",
+        title: "Desarrollador RPA - Nexia",
+        description: `
+           Creación de sistemas con metodología RPA (Automatización robotica de procesos)
+        `,
+    },
+    {
+        date: "Enero 2019",
+        title: "Freelancer",
+        description: `
+            Diseñar y maquetar páginas web full responsive. Consumir e integrar web services (REST) en aplicaciones web
+            Diseñar lógica del lado del cliente para hacer validaciones en las aplicaciones
+            Crear web services
+        `,
+    },
+    {
+        date: "Septiembre 2019",
+        title: "Desarrollador FullStack - MDos 4",
+        description: `
+           Diseñar y maquetar páginas web mediante el marco de trabajo Laravel con la metodología MVC
+        `,
+    },
+];
+---
+
+<h2 class="text-4xl font-semibold mb-6 flex gap-x-2 items-center">
+    <SuiteCase class="size-7" />
+    Experiencia laboral
+</h2>
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3.5">
+    {
+        experiencias.map((experiencia) => (
+            <li class="mb-10 ms-4">
+                <ExperienciaItem
+                    date={experiencia.date}
+                    title={experiencia.title}
+                    description={experiencia.description}
+                />
+            </li>
+        ))
+    }
+</ol>
